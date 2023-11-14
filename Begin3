@@ -1,0 +1,12 @@
+public class GitHub {
+  public static void main(String[] args){
+      Scanner scanner = new Scanner(System.in);
+    System.out.println("To'rtburchak tomonini kiriting");
+    int a= scanner.nextInt();
+    System.out.println("To'rtburchak tomonini kiriting");
+    int b= scanner.nextInt();
+    System.out.println("To'g'ri to'rtburchakning yuzasi:"+ a*b);
+    System.out.println("To'g'ri to'rtburchakning perimetri: "+ (2*a+2*b));
+  }
+
+}
