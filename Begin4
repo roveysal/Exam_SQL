@@ -1,0 +1,9 @@
+public class GitHub {
+  public static void main(String[] args){
+       System.out.println(calculateArea(12));
+      }
+      public static double calculateArea(int d){
+          return d* 3.14;
+      }
+
+  }
