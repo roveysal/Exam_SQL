@@ -1,0 +1,13 @@
+public class GitHub {
+  public static void main(String[] args){
+      // Begin1 && Begin2
+      Scanner scanner = new Scanner(System.in);
+      System.out.print("Kvadrat tomonini kiriting: ");
+      int a = scanner.nextInt();
+      int sum = 4*a;
+      int summa = a*a;
+      System.out.println("Kvadrat perimetri: "+sum);
+      System.out.println("Kvadrat yuzasi: " + summa );
+  }
+
+}
