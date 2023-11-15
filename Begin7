@@ -1,0 +1,12 @@
+public class GitHub {
+    public static void main(String[] args) {
+        System.out.println("Aylananing uzunligi: "+ aroundL(6.0));
+        System.out.println("Aylananing yuzasi: "+ aroundS(6.0));
+    }
+    public static double aroundL(double r){
+        return 2*3.14*r;
+    }
+    public static double aroundS(double r){
+        return 3.14*r*r;
+    }
+}
