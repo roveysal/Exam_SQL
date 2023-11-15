@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("a ni kiriting: ");
+        double a = scanner.nextDouble();
+        System.out.print("b ni kiriting: ");
+        double b = scanner.nextDouble();
+        double ortaGeometriya = Math.sqrt(a * b);
+        System.out.println("O'rta geometrigi: " + ortaGeometriya);
+    }
+}
