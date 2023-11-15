@@ -1,0 +1,13 @@
+public class GitHub {
+    public static void main(String[] args) {
+        System.out.println("Parallelopipedning hajmi: " + volumeP(2,6,4));
+        System.out.println("Parallelopipedning yuzasi: "+ areaP(2,4,6));
+    }
+    public static int volumeP(int a, int b,int c){
+        return a*b*c;
+    }
+    public static int areaP(int a, int b, int c){
+        return 2*(a*b+a*c+b*c);
+    }
+
+}
