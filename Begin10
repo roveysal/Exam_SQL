@@ -1,0 +1,16 @@
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("a sonini kiriting:");
+        int a= scanner.nextInt();
+        System.out.println("b sonini kiriting:");
+        int b= scanner.nextInt();
+        if(a==0 && b==0){
+            System.out.println(0);
+        }else{
+            System.out.println("Yig'indisi: "+ (a+b));
+            System.out.println("Ko'paytmasi: "+ (a*b));
+            System.out.println("Kvadrati: " + "a:" + a*a+" "+"b:"+b*b);
+        }
+    }
+}
