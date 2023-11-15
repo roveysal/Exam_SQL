@@ -1,0 +1,8 @@
+public class GitHub {
+    public static void main(String[] args) {
+        System.out.println("a va b sonlarining o'rta arifmetigi: "+ arifmetic(24,26));
+    }
+    public static int arifmetic(int a, int b){
+        return (a+b)/2;
+    }
+}
