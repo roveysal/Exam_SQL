@@ -1,0 +1,11 @@
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Aylananing yuzasini kiriting (S): ");
+        double S = scanner.nextDouble();
+        double R = Math.sqrt(S / Math.PI);
+        double d = 2 * R;
+        System.out.println("Aylananing radiusi (R): " + R);
+        System.out.println("Aylananing diametri (d): " + d);
+    }
+}
