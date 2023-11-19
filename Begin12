@@ -1,0 +1,13 @@
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Katet a ni kiriting: ");
+        double a = scanner.nextDouble();
+        System.out.print("Katet b ni kiriting: ");
+        double b = scanner.nextDouble();
+        double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        double P = a + b + c;
+        System.out.println("Gipotenuza c: " + c);
+        System.out.println("Perimetri P: " + P);
+    }
+}
