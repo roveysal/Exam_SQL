@@ -1,0 +1,11 @@
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Birinchi sonni kiriting: ");
+        int a = scanner.nextInt();
+        System.out.println("Ikkinchi sonni kiriting: ");
+        int b = scanner.nextInt();
+        int oraliq = b - a;
+        System.out.println("Sonlar orasidagi masofa: " + oraliq);
+    }
+}
