@@ -1,0 +1,15 @@
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("R1 ni kiriting: ");
+        double r1= scanner.nextDouble();
+        System.out.println("R2 ni kiriting: ");
+        double r2= scanner.nextDouble();
+        double s1= 3.14*r1;
+        double s2=3.14*r2;
+        double s3= 3.14*(r1-r2);
+        System.out.println("S1 yuzasi: "+s1);
+        System.out.println("S2 yuzasi: "+s2);
+        System.out.println("S3 yuza: "+s3);
+    }
+}
