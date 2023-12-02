@@ -1,0 +1,26 @@
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("A nuqta x qiymati: ");
+        double xA = scanner.nextDouble();
+        System.out.print("A nuqta y qiymati: ");
+        double yA = scanner.nextDouble();
+
+        System.out.print("B nuqta x qiymati: ");
+        double xB = scanner.nextDouble();
+        System.out.print("B nuqta y qiymati: ");
+        double yB = scanner.nextDouble();
+
+        System.out.print("C nuqta x qiymati: ");
+        double xC = scanner.nextDouble();
+        System.out.print("C nuqta y qiymati: ");
+        double yC = scanner.nextDouble();
+
+        double acUzunlik = Math.sqrt(Math.pow(xC - xA, 2) + Math.pow(yC - yA, 2));
+        double bcUzunlik = Math.sqrt(Math.pow(xC - xB, 2) + Math.pow(yC - yB, 2));
+        System.out.println("AC kesmasi uzunligi: " + acUzunlik);
+        System.out.println("BC kesmasi uzunligi: " + bcUzunlik);
+        System.out.println("AC va BC kesmalarning uzunligi yig'indisi: " + (acUzunlik + bcUzunlik));
+
+    }
+}
