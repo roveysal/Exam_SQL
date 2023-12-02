@@ -1,0 +1,19 @@
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("A nuqtani kiriting:");
+        double a= scanner.nextDouble();
+        System.out.println("B nuqtani kiriting:");
+        double b = scanner.nextDouble();
+        System.out.println("C nuqatni kiriting:");
+        double c= scanner.nextDouble();
+
+        double acUzunlik=c-a;
+        double bcUzunlik=c-b;
+        double sum=bcUzunlik+acUzunlik;
+        System.out.println("AC kesma uzunligi:"+Math.abs(acUzunlik));
+        System.out.println("BC kesma uzunligi:"+Math.abs(bcUzunlik));
+        System.out.println("AC va BC kesmalar uzunligi yig'indisi: "+sum );
+
+    }
+}
