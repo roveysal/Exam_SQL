@@ -1,0 +1,13 @@
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Son kiriting: ");
+        int numb= scanner.nextInt();
+        if(numb>0){
+            System.out.println(numb+=1);
+        }else{
+            System.out.println(numb-=2);
+        }
+
+    }
+}
