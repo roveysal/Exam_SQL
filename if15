@@ -1,0 +1,10 @@
+ public class GitHub {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int a= scanner.nextInt();
+            int b= scanner.nextInt();
+            int c= scanner.nextInt();
+            int bigger2=(a > b && a > c) ? a : ((b > a && b > c) ? b : c);
+            System.out.println(bigger2);
+        }
+    }
