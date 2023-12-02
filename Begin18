@@ -1,0 +1,17 @@
+public class GitHub {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("A nuqtani kiriting:");
+        double a= scanner.nextDouble();
+        System.out.println("B nuqtani kiriting:");
+        double b = scanner.nextDouble();
+        System.out.println("C nuqatni kiriting:");
+        double c= scanner.nextDouble();
+
+        double acUzunlik=c-a;
+        double bcUzunlik=b-c;
+        double kopaytma=acUzunlik*bcUzunlik;
+        System.out.println("AC va BC kesma uzunligi ko'paytmasi"+kopaytma);
+
+    }
+}
