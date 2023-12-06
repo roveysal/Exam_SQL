@@ -1,0 +1,16 @@
+public class GitHub {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Son kiriting");
+            int a = scanner.nextInt();
+            System.out.println("Son kiriting");
+            int b = scanner.nextInt();
+            System.out.println("Son kiriting");
+            int c = scanner.nextInt();
+            if((b<c && b>a)||(b>c && b<a)){
+                System.out.println("A soni: "+ a*2 +" B soni: "+b*2+" C soni"+c*2);
+            }else{
+                System.out.println("A soni: "+a*(-1)+" B soni: "+b*(-1)+" C soni: "+c*(-1));
+            }
+        }
+    }
