@@ -1,0 +1,22 @@
+ public class GitHub {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int son1= scanner.nextInt();
+            int son2= scanner.nextInt();
+            int son3= scanner.nextInt();
+            int son4= scanner.nextInt();
+
+            if (son1==son2 && son1==son4){
+                System.out.println("3-son tartib raqami: "+son3);
+            } else if (son2==son3 && son2==son4) {
+                System.out.println("1-son tartib raqami: "+son1);
+            } else if (son1==son3 && son1==son4) {
+                System.out.println("2-son tartib raqami: "+son2);
+            }else if (son1==son2 && son1==son3) {
+                System.out.println("4-son tartib raqami: "+son4);
+            }else {
+                System.out.println("Hech qaysi 2 ta son bir birga teng emas");
+            }
+        
+        }
+    }
