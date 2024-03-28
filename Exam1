@@ -1,0 +1,131 @@
+TASK 1 
+--1
+CREATE DATABASE universities;
+
+--2
+CREATE TABLE student
+(
+    id bigserial NOT NULL, PRIMARY KEY,
+    name character varying NOT NULL,
+    birthday_date date,
+    group_numb integer
+);
+
+--3
+CREATE TABLE subject
+(
+    id bigserial, PRIMARY KEY,
+    name character varying,
+    description character varying,
+    grade integer
+);
+
+--4
+CREATE TABLE payment_type
+(
+    id bigserial, PRIMARY KEY,
+    name character varying
+);
+
+--5
+CREATE TABLE payment
+(
+    id bigserial PRIMARY KEY,
+    type_id bigint,
+    amount numeric,
+    student_id bigint,
+    paymet_date date,
+    CONSTRAINT type_id_fkey FOREIGN KEY (type_id)
+        REFERENCES public.payment_type (id) MATCH SIMPLE
+        ON UPDATE RESTRICT
+        ON DELETE RESTRICT
+        NOT VALID,
+    CONSTRAINT student_id_fkey FOREIGN KEY (student_id)
+        REFERENCES public.student (id) MATCH SIMPLE
+        ON UPDATE RESTRICT
+        ON DELETE RESTRICT
+        NOT VALID
+);
+
+
+
+TASK 2
+--1
+INSERT INTO student(name, birthday_date, group_numb) VALUES('John', '2002-09-23', 1);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('Chris', '2001-08-30', 1);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('Carl', '2003-01-19', 1);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('Oliver', '2000-09-14', 2);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('James', '2000-12-23', 2);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('Lucas', '1999-11-17', 2);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('Henry', '1999-10-19', 2);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('Jacob', '1998-05-15', 3);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('Logan', '2000-09-27', 3);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('Garry', '1998-02-12', 4);
+INSERT INTO student(name, birthday_date, group_numb) VALUES('Emily', '1997-03-29', 5);
+
+--2
+INTO subject(name, description, grade) VALUES('Art', 'art of seeing beauty', 1);
+INSERT INTO subject(name, description, grade) VALUES('Music', 'about music', 1);
+INSERT INTO subject(name, description, grade) VALUES('Geography', 'null', 2);
+INSERT INTO subject(name, description, grade) VALUES('History', 'null', 2);
+INSERT INTO subject(name, description, grade) VALUES('PE', 'null', 3);
+INSERT INTO subject(name, description, grade) VALUES('Math','equations', 3);
+INSERT INTO subject(name, description, grade) VALUES('Science', 'about nature', 4);
+INSERT INTO subject(name, description, grade) VALUES('IT', 'Informational technology', 4);
+INSERT INTO subject(name, description, grade) VALUES('BigData', 'world data', 5);
+INSERT INTO subject(name, description, grade) VALUES('Biology', 'human body and anathomy', 5);
+
+--3 
+INSERT INTO payment_type(name) VALUES('Daily');
+INSERT INTO payment_type(name) VALUES('Weekly');
+INSERT INTO payment_type(name) VALUES('Monthly');
+
+--4
+INSERT INTO payment(type_id, amount, student_id, payment_date) VALUES(2, 120000, 1, '2024-03-27');
+INSERT INTO payment(type_id, amount, student_id, payment_date) VALUES(3, 300000, 4, '2024-03-26');
+INSERT INTO payment(type_id, amount, student_id, payment_date) VALUES(2, 120000, 7, '2024-03-24');
+INSERT INTO payment(type_id, amount, student_id, payment_date) VALUES(1, 6000, 5, '2024-03-20');
+
+--5
+insert into mark(id, student_id, subject_id, mark) values (1, 2, 1, 8);
+insert into mark(id, student_id, subject_id, mark) values (2, 4, 4, 5);
+insert into mark(id, student_id, subject_id, mark) values (3, 5, 3, 9);
+insert into mark(id, student_id, subject_id, mark) values (4, 7, 6, 4);
+insert into mark(id, student_id, subject_id, mark) values (5, 8, 5, 9);
+
+
+
+
+TASK 3 
+--1
+ALTER TABLE student ALTER COLUMN birthday_date SET NOT NULL;
+
+--2
+ALTER TABLE mark
+ADD CONSTRAINT mark_limit CHECK(mark>=1 AND mark <= 10);
+ALTER TABLE mark ALTER COLUMN student_id SET NOT NULL;
+
+ALTER TABLE mark ALTER COLUMN subject_id SET NOT NULL;
+
+--3
+ALTER TABLE subject
+ADD CONSTRAINT subject_grade CHECK(grade>=1 AND grade <= 5);
+
+--4
+ALTER TABLE payment_type
+ADD CONSTRAINT payment_type_name UNIQUE(name);
+
+
+
+TASK 4 
+--1
+SELECT * FROM student;
+
+--2
+SELECT * FROM student LIMIT 50;
+
+--3
+SELECT name FROM student;
+
+--4
+SELECT DISTINCT amount FROM payment;
